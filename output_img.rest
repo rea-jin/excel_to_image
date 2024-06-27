@@ -1,0 +1,67 @@
+@base_url = http://localhost/excel_img/
+@api_name = output_img.php
+
+### パターン１
+POST {{base_url}}/{{api_name}} HTTP/1.1
+Content-Type: application/json
+    
+{
+   "date1": "2020-01-01",
+   "date2": "2020-01-01",
+   "diff_const": 10000,
+   "cost_1":[
+        {
+            "name": "name1",
+            "value": 100
+        },
+        {
+            "name": "name2",
+            "value": 200
+        }
+   ],
+   "cost_2":[
+        {
+            "name": "name1",
+            "value": 100
+        },
+        {
+            "name": "name2",
+            "value": 200
+        }
+   ]
+}
+
+### パターン２
+POST {{base_url}}/{{api_name}} HTTP/1.1
+Content-Type: application/json
+    
+{
+   "date1": "2020-01-01",
+   "date2": "2020-01-01",
+   "diff_cost": 10000,
+   "hotels": [
+        {
+            "name": "name1"
+        },
+        {
+            "name": "name2"
+        }
+   ],
+   "cost_1":[
+        {
+            "value": 100
+        },
+        {
+            "value": 200
+        }
+   ],
+   "cost_2":[
+        {
+            "value": 100
+        },
+        {
+            "value": 200
+        }
+   ]
+}
+
